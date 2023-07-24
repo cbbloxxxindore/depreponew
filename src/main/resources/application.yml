@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: department-service
+  config:
+    import: optional:configserver:http://localhost:8500/
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root
+    username: root
+    url: jdbc:mysql://localhost:3306/empdetab
+
+
+  instance:
+    hostname: localhost
+
+server:
+  port: 8200
